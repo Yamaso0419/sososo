@@ -1,0 +1,70 @@
+function drawPlayer(x,y){
+
+ctx.fillStyle="cyan";
+
+// 頭
+ctx.beginPath();
+ctx.arc(x,y-15,7,0,Math.PI*2);
+ctx.fill();
+
+// 体
+ctx.fillRect(x-3,y-15,6,20);
+
+// 腕
+ctx.beginPath();
+ctx.moveTo(x,y-5);
+ctx.lineTo(x-8,y+5);
+ctx.moveTo(x,y-5);
+ctx.lineTo(x+8,y+5);
+ctx.strokeStyle="cyan";
+ctx.lineWidth=2;
+ctx.stroke();
+
+// 足
+ctx.beginPath();
+ctx.moveTo(x,y+5);
+ctx.lineTo(x-6,y+15);
+ctx.moveTo(x,y+5);
+ctx.lineTo(x+6,y+15);
+ctx.stroke();
+
+}
+
+
+function drawYankee(x,y){
+
+ctx.fillStyle="red";
+
+// ゴツい頭
+ctx.beginPath();
+ctx.arc(x,y-18,10,0,Math.PI*2);
+ctx.fill();
+
+// リーゼント
+ctx.fillStyle="black";
+ctx.fillRect(x-8,y-28,16,8);
+
+// ゴツい体
+ctx.fillStyle="darkred";
+ctx.fillRect(x-6,y-15,12,28);
+
+// 太い腕
+ctx.strokeStyle="darkred";
+ctx.lineWidth=6;
+
+ctx.beginPath();
+ctx.moveTo(x,y-5);
+ctx.lineTo(x-12,y+8);
+ctx.moveTo(x,y-5);
+ctx.lineTo(x+12,y+8);
+ctx.stroke();
+
+// 太い足
+ctx.beginPath();
+ctx.moveTo(x,y+13);
+ctx.lineTo(x-8,y+25);
+ctx.moveTo(x,y+13);
+ctx.lineTo(x+8,y+25);
+ctx.stroke();
+
+}
